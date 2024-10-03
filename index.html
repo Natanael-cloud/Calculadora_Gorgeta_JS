@@ -27,7 +27,7 @@
   <body>
     <!-- Início do corpo da página HTML -->
 
-    <main>
+    <main oninput="update()">
       <!-- Elemento principal do conteúdo da página -->
 
       <h1>Calculadora de Tip</h1>
@@ -46,7 +46,6 @@
             type="number" 
             placeholder="Your bill" 
             id="yourBill"  
-            oninput="update()"
           />
           <!-- Campo de entrada numérica para inserir o valor da conta, com um placeholder "Your bill" e o id "yourBill" -->
         </div>
