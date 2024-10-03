@@ -1,5 +1,5 @@
 function formatMoney(value) {
-    // A função formatMoney formata um valor numérico em uma string com símbolo de dólar e duas casas decimais.
+    // A função formatMoney formata um valor numérico em uma string com símbolo da moeda REAL (BR) e duas casas decimais.
 
     value = Math.ceil(value * 100) / 100
     // Arredonda o valor para cima até a segunda casa decimal.
@@ -7,18 +7,18 @@ function formatMoney(value) {
     value = value.toFixed(2)
     // Garante que o valor tenha exatamente duas casas decimais.
 
-    return '$ ' + value
-    // Retorna o valor formatado como string, precedido pelo símbolo de dólar.
+    return 'R$ ' + value
+    // Retorna o valor formatado como string, precedido pelo símbolo do Real.
 }
 
 function formatSplit(value) {
-    // A função formatSplit ajusta a exibição do número de pessoas para 'person' no singular ou 'people' no plural.
+    // A função formatSplit ajusta a exibição do número de pessoas para 'Pessoa' no singular ou 'Pessoas' no plural.
 
-    if (value == 1) return value + ' person'
-    // Se o valor for 1, retorna '1 person' (singular).
+    if (value == 1) return value + ' Pessoa'
+    // Se o valor for 1, retorna '1 Pessoa' (singular).
 
-    return value + ' people'
-    // Caso contrário, retorna o valor seguido de 'people' (plural).
+    return value + ' Pessoas'
+    // Caso contrário, retorna o valor seguido de 'Pessoas' (plural).
 }
 
 function update() {
@@ -46,7 +46,7 @@ function update() {
     // Atualiza o elemento HTML para mostrar a porcentagem de gorjeta selecionada.
 
     document.getElementById('tipValue').innerHTML = formatMoney(tipValue)
-    // Atualiza o elemento HTML para mostrar o valor da gorjeta, formatado em dólares.
+    // Atualiza o elemento HTML para mostrar o valor da gorjeta, formatado em REAL.
 
     document.getElementById('totalWithTip').innerHTML = formatMoney(billTotal)
     // Atualiza o elemento HTML para mostrar o valor total da conta, incluindo a gorjeta.
@@ -55,5 +55,5 @@ function update() {
     // Atualiza o elemento HTML para mostrar o número de pessoas, formatado corretamente no singular ou plural.
 
     document.getElementById('billEach').innerHTML = formatMoney(billTotal / split)
-    // Atualiza o elemento HTML para mostrar quanto cada pessoa deve pagar, formatado em dólares.
+    // Atualiza o elemento HTML para mostrar quanto cada pessoa deve pagar, formatado em REAL.
 }
