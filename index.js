@@ -6,5 +6,6 @@ function update(){
 
     let tipValue = bill *(tipPercent / 100)
     console.log(tipPercent)
-    
+    let billTotal = bill + tipValue
+    let billEach = billTotal / split
 }
