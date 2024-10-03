@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="style.css" />
     <!-- Linka o arquivo externo de estilos CSS chamado "styles.css" -->
     
-    <title>Quick Tip</title>
+    <title>Calculadora de Gorgeta</title>
     <!-- Define o título da página, que aparece na aba do navegador -->
   </head>
 
@@ -33,7 +33,7 @@
     <main oninput="update()">
       <!-- O conteúdo principal da página. O atributo "oninput" chama a função "update()" quando qualquer input é modificado -->
       
-      <h1>Calculadora de Tip</h1>
+      <h1>Calculadora de Gorgeta</h1>
       <!-- Título principal da página -->
 
       <section>
@@ -42,12 +42,12 @@
         <div class="bill">
           <!-- Div que contém os elementos de entrada da conta ("bill") -->
           
-          <label for="yourBill">Bill</label>
+          <label for="yourBill">Sua conta deu: </label>
           <!-- Rótulo para o campo de entrada do valor da conta, com referência ao campo de input através do atributo "for" -->
           
           <input 
             type="number" 
-            placeholder="Your bill" 
+            placeholder="Conta" 
             id="yourBill"  
           />
           <!-- Campo de entrada onde o usuário pode inserir o valor da conta. O tipo "number" garante que apenas números sejam aceitos -->
@@ -57,7 +57,7 @@
           <div class="space-between">
             <!-- Classe para alinhar os elementos dentro da div com espaçamento entre eles -->
             
-            <label for="">Select tip</label>
+            <label for="">Selecionar Porcentagem %</label>
             <!-- Rótulo para o campo de seleção de porcentagem da gorjeta -->
             
             <span id="tipPercent"></span>
@@ -71,7 +71,7 @@
         <div class="space-between">
           <!-- Div que organiza os elementos horizontalmente, com espaçamento entre eles -->
           
-          <span>Tip</span>
+          <span>Gorgeta</span>
           <!-- Rótulo para exibir o valor da gorjeta -->
           
           <span id="tipValue"></span>
@@ -99,7 +99,7 @@
           <div class="space-between">
             <!-- Div para alinhar os elementos com espaçamento entre eles -->
             
-            <label for="splitInput">Split</label>
+            <label for="splitInput">Dividido por:</label>
             <!-- Rótulo para o campo de entrada do número de pessoas para dividir a conta -->
             
             <span id="splitValue"></span>
@@ -120,7 +120,7 @@
         <div class="space-between">
           <!-- Div para alinhar os elementos com espaçamento entre eles -->
           
-          <span>Bill each</span>
+          <span>Conta por Pessoa:</span>
           <!-- Rótulo que indica o valor da conta por pessoa -->
           
           <span id="billEach"></span>
