@@ -1,110 +1,111 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <!-- Declaração do tipo de documento como HTML5 e definição do idioma como português do Brasil -->
+  <!-- Define o idioma da página como inglês -->
+  
   <head>
+    <!-- Cabeçalho do documento, onde se define metadados e links para recursos externos -->
+    
     <meta charset="UTF-8" />
-    <!-- Define o conjunto de caracteres como UTF-8 para suportar a maioria dos caracteres -->
+    <!-- Define a codificação de caracteres como UTF-8 para suportar uma ampla variedade de caracteres -->
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Configura a página para ser responsiva, ajustando a largura conforme o tamanho da tela do dispositivo -->
-
+    <!-- Define a janela de visualização (viewport) para garantir que o site seja responsivo em dispositivos móveis -->
+    
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <!-- Garante a compatibilidade com o modo de exibição mais recente do Internet Explorer -->
-
+    <!-- Garante que a página será renderizada corretamente no Internet Explorer (utilizando o modo mais recente) -->
+    
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,700;1,400&display=swap"
       rel="stylesheet"
     />
-    <!-- Link para carregar a fonte "Roboto" do Google Fonts, usada na estilização do texto da página -->
-
-    <link rel="stylesheet" href="styles.css" />
-    <!-- Link para o arquivo externo de estilos CSS chamado "styles.css" -->
-
-    <title>Calculadora_Gorgeta</title>
+    <!-- Importa a fonte Roboto do Google Fonts, com várias variações de peso e estilo -->
+    
+    <link rel="stylesheet" href="style.css" />
+    <!-- Linka o arquivo externo de estilos CSS chamado "styles.css" -->
+    
+    <title>Quick Tip</title>
     <!-- Define o título da página, que aparece na aba do navegador -->
   </head>
 
   <body>
-    <!-- Início do corpo da página HTML -->
-
+    <!-- Corpo do documento, onde todo o conteúdo visível da página é inserido -->
+    
     <main oninput="update()">
-      <!-- Elemento principal do conteúdo da página -->
-
+      <!-- O conteúdo principal da página. O atributo "oninput" chama a função "update()" quando qualquer input é modificado -->
+      
       <h1>Calculadora de Tip</h1>
-      <!-- Cabeçalho de nível 1 exibindo o título da aplicação "Quick Tip" -->
+      <!-- Título principal da página -->
 
       <section>
-        <!-- Primeira seção da página, responsável por capturar os dados da conta e gorjeta -->
+        <!-- Seção que contém os inputs e exibições relacionados ao valor da conta e da gorjeta -->
         
         <div class="bill">
-          <!-- Cria um contêiner para o campo de input da conta -->
+          <!-- Div que contém os elementos de entrada da conta ("bill") -->
           
-          <label for="yourBill">Sua Conta</label>
-          <!-- Rótulo para o campo de input "Sua Conta", que será associado ao id "yourBill" -->
+          <label for="yourBill">Bill</label>
+          <!-- Rótulo para o campo de entrada do valor da conta, com referência ao campo de input através do atributo "for" -->
           
           <input 
             type="number" 
             placeholder="Your bill" 
             id="yourBill"  
           />
-          <!-- Campo de entrada numérica para inserir o valor da conta, com um placeholder "Your bill" e o id "yourBill" -->
+          <!-- Campo de entrada onde o usuário pode inserir o valor da conta. O tipo "number" garante que apenas números sejam aceitos -->
         </div>
-
+        
         <div>
-          <!-- Contêiner para a seleção da porcentagem da gorjeta -->
-
           <div class="space-between">
-            <!-- Divisão que organiza o rótulo e o valor da porcentagem de gorjeta -->
+            <!-- Classe para alinhar os elementos dentro da div com espaçamento entre eles -->
             
-            <label for="">Selecionar Gorgeta</label>
-            <!-- Rótulo para o controle deslizante de seleção da gorjeta -->
+            <label for="">Select tip</label>
+            <!-- Rótulo para o campo de seleção de porcentagem da gorjeta -->
             
-            <span id="tipPercent">0%</span>
-            <!-- Exibe a porcentagem da gorjeta selecionada, inicializada como 0% -->
+            <span id="tipPercent"></span>
+            <!-- Exibe a porcentagem de gorjeta escolhida pelo usuário -->
           </div>
           
           <input type="range" value="0" id="tipInput" class="range" />
-          <!-- Controle deslizante para selecionar a porcentagem da gorjeta, inicializado com valor 0 -->
+          <!-- Campo deslizante (slider) para selecionar a porcentagem da gorjeta, com valor inicial 0 -->
         </div>
-
+        
         <div class="space-between">
-          <!-- Contêiner para exibir o valor da gorjeta calculada -->
+          <!-- Div que organiza os elementos horizontalmente, com espaçamento entre eles -->
           
-          <span>Gorgeta</span>
-          <!-- Texto estático "Gorgeta" para indicar o valor da gorjeta -->
-
+          <span>Tip</span>
+          <!-- Rótulo para exibir o valor da gorjeta -->
+          
           <span id="tipValue"></span>
-          <!-- Local onde será exibido o valor da gorjeta calculada dinamicamente -->
+          <!-- Exibe o valor calculado da gorjeta -->
         </div>
 
         <hr />
-        <!-- Linha horizontal para separar as informações de gorjeta e total -->
-
+        <!-- Linha horizontal para separar seções visuais -->
+        
         <div class="space-between total">
-          <!-- Contêiner para exibir o valor total da conta com a gorjeta -->
+          <!-- Div com classe "total" para exibir o valor total da conta com a gorjeta -->
           
           <span>Total</span>
-          <!-- Texto estático "Total" para indicar o valor total da conta -->
+          <!-- Rótulo que indica o valor total da conta -->
           
           <span id="totalWithTip"></span>
-          <!-- Local onde será exibido o valor total da conta, incluindo a gorjeta -->
+          <!-- Exibe o valor total da conta incluindo a gorjeta -->
         </div>
       </section>
 
       <section>
-        <!-- Segunda seção da página, responsável pela divisão da conta entre várias pessoas -->
+        <!-- Segunda seção que contém os inputs e exibições relacionados à divisão da conta -->
         
         <div>
           <div class="space-between">
-            <!-- Contêiner para o controle deslizante e o valor de divisão -->
+            <!-- Div para alinhar os elementos com espaçamento entre eles -->
             
             <label for="splitInput">Split</label>
-            <!-- Rótulo para o controle deslizante de divisão da conta -->
+            <!-- Rótulo para o campo de entrada do número de pessoas para dividir a conta -->
             
-            <span id="splitValue">1</span>
-            <!-- Exibe o valor inicial de divisão da conta, começando em 1 (sem dividir) -->
+            <span id="splitValue"></span>
+            <!-- Exibe o número atual de pessoas para dividir a conta -->
           </div>
-
+          
           <input
             type="range"
             min="1"
@@ -113,22 +114,24 @@
             id="splitInput"
             class="range"
           />
-          <!-- Controle deslizante para selecionar quantas pessoas dividirão a conta (mínimo 1, máximo 10) -->
+          <!-- Campo deslizante para selecionar o número de pessoas para dividir a conta, com mínimo de 1 e máximo de 10 -->
         </div>
-
+        
         <div class="space-between">
-          <!-- Contêiner para exibir o valor da conta para cada pessoa após a divisão -->
+          <!-- Div para alinhar os elementos com espaçamento entre eles -->
           
-          <span>Conta de cada Um</span>
-          <!-- Texto estático "Conta de cada Um" para indicar o valor por pessoa -->
+          <span>Bill each</span>
+          <!-- Rótulo que indica o valor da conta por pessoa -->
           
           <span id="billEach"></span>
-          <!-- Local onde será exibido o valor da conta por pessoa calculado dinamicamente -->
+          <!-- Exibe o valor da conta dividido por pessoa -->
         </div>
       </section>
     </main>
 
     <script src="index.js"></script>
-    <!-- Inclui o arquivo JavaScript externo "index.js", que contém a lógica para calcular gorjeta e dividir a conta -->
+    <!-- Inclui o arquivo JavaScript "index.js", que contém a lógica para atualizar os cálculos de gorjeta e divisão -->
   </body>
 </html>
+
+   
