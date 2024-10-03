@@ -1,6 +1,10 @@
 
 function update(){
-    let bill = Num[document.getElementById('yourBill').value]
+    let bill = Num(document.getElementById('yourBill').value)
     let tipPercent = document.getElementById('tipInput').value    
-    let split = document.getElementById('splitInput')
+    let split = document.getElementById('splitInput').value
+
+    let tipValue = bill *(tipPercent / 100)
+    console.log(tipPercent)
+    
 }
