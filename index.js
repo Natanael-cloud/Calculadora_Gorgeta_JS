@@ -1,5 +1,5 @@
 
 function update(){
-    let bill = document.getElementById('yourBill').value
-    console.log(bill)    
+    let bill = Num[document.getElementById('yourBill').value]
+    let tipPercent = document.getElementById('tipInput').value    
 }
