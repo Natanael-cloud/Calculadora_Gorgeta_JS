@@ -1,0 +1,151 @@
+html {
+    font-family: "Roboto", sans-serif;
+    /* Define a fonte padrão para o texto como "Roboto" e, se não disponível, usa uma fonte sem serifa */
+    font-size: 10px;
+    /* Define o tamanho padrão do texto como 10px */
+    color: #4e4d4d;
+    /* Define a cor padrão do texto como cinza escuro */
+}
+
+main {
+    max-width: 50rem;
+    /* Define a largura máxima do elemento main como 50rem */
+    margin: 2rem auto;
+    /* Define uma margem de 2rem no topo e no fundo, e centraliza horizontalmente com "auto" */
+    padding: 3rem 1.6rem 6rem 1.6rem;
+    /* Define um espaçamento interno (padding): 3rem no topo, 1.6rem nas laterais e 6rem no fundo */
+    background: linear-gradient(30deg, #3dc0c0, #5bceae);
+    /* Aplica um fundo com gradiente linear, que vai de #3dc0c0 para #5bceae em um ângulo de 30 graus */
+    border-radius: 4rem;
+    /* Arredonda os cantos do elemento com 4rem */
+    box-shadow: 0 2px 2px lightgray;
+    /* Aplica uma sombra levemente abaixo do elemento */
+}
+
+h1 {
+    text-align: center;
+    /* Centraliza o texto do título h1 */
+    font-size: 3rem;
+    /* Define o tamanho da fonte como 3rem */
+    margin: 0;
+    /* Remove a margem ao redor do h1 */
+    padding-bottom: 3rem;
+    /* Adiciona um espaçamento abaixo do h1 de 3rem */
+}
+
+section {
+    background-color: white;
+    /* Define o fundo da seção como branco */
+    font-size: 1.8rem;
+    /* Define o tamanho da fonte como 1.8rem */
+    margin-bottom: 1.6rem;
+    /* Adiciona uma margem inferior de 1.6rem */
+    padding: 0 1.6rem;
+    /* Adiciona um espaçamento interno de 1.6rem nas laterais */
+    border-radius: 1rem;
+    /* Arredonda os cantos da seção com 1rem */
+    box-shadow: inset 0 2px 2px lightgray;
+    /* Aplica uma sombra interna dentro da seção */
+}
+
+section > div {
+    padding: 1.6rem 0;
+    /* Define um espaçamento interno vertical de 1.6rem para os divs dentro da seção */
+}
+
+.bill {
+    display: flex;
+    /* Exibe os elementos dentro do .bill em um layout flexível */
+}
+.bill label {
+    flex: 1;
+    /* O rótulo (label) ocupa 1 parte do espaço total no layout flexível */
+    align-self: center;
+    /* Alinha o label verticalmente no centro */
+}
+.bill input {
+    flex: 3;
+    /* O campo de input ocupa 3 partes do espaço total no layout flexível */
+}
+
+input[type="number"] {
+    font-family: inherit;
+    /* Usa a mesma fonte definida no elemento pai */
+    background: #f4f4f5;
+    /* Define o fundo do input como uma cor cinza claro */
+    font-size: 1.6rem;
+    /* Define o tamanho da fonte como 1.6rem */
+    border: 1px solid lightgray;
+    /* Define uma borda sólida e fina de cor cinza claro */
+    border-radius: 0.5rem;
+    /* Arredonda os cantos do input com 0.5rem */
+    padding: 0.8rem 0 0.8rem 1rem;
+    /* Define um espaçamento interno: 0.8rem acima e abaixo, e 1rem à esquerda */
+    box-shadow: inset 0 2px 2px lightgray;
+    /* Adiciona uma sombra interna dentro do input */
+}
+
+.space-between {
+    display: flex;
+    justify-content: space-between;
+    /* Exibe os itens dentro do .space-between em um layout flexível e distribui-os uniformemente nas extremidades */
+}
+
+.total {
+    font-size: 2rem;
+    /* Define o tamanho da fonte como 2rem */
+    font-weight: bolder;
+    /* Define o peso da fonte como mais grosso (bolder) */
+}
+
+.range {
+    -webkit-appearance: none;
+    /* Remove o estilo padrão do controle deslizante no WebKit (Chrome/Safari) */
+    width: 100%;
+    /* Define a largura do controle deslizante como 100% do seu contêiner */
+    height: 8px;
+    /* Define a altura do controle deslizante */
+    margin-top: 1.2rem;
+    /* Adiciona uma margem superior de 1.2rem */
+    background: #eee;
+    /* Define a cor de fundo do controle deslizante como cinza claro */
+    border-radius: 0.3rem;
+    /* Arredonda os cantos do controle deslizante */
+    outline-color: #5bceae;
+    /* Define a cor do contorno ao focar no controle como #5bceae */
+}
+
+.range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    /* Remove o estilo padrão do controle deslizante no WebKit */
+    width: 2.2rem;
+    /* Define a largura do "thumb" (botão que se move no controle deslizante) */
+    height: 2.2rem;
+    /* Define a altura do "thumb" */
+    border-radius: 50%;
+    /* Arredonda o "thumb" para parecer um círculo */
+    background: #3dc0c0;
+    /* Define a cor de fundo do "thumb" */
+    cursor: pointer;
+    /* Altera o cursor para "pointer" ao passar o mouse sobre o "thumb" */
+}
+
+.range::-moz-range-thumb {
+    width: 2.2rem;
+    /* Define a largura do "thumb" no Firefox */
+    height: 2.2rem;
+    /* Define a altura do "thumb" no Firefox */
+    border-radius: 50%;
+    /* Arredonda o "thumb" no Firefox para parecer um círculo */
+    background: #3dc0c0;
+    /* Define a cor de fundo do "thumb" no Firefox */
+    cursor: pointer;
+    /* Altera o cursor para "pointer" no Firefox */
+    border: 0;
+    /* Remove a borda padrão do "thumb" no Firefox */
+}
+
+.range::-moz-focus-outer {
+    border: 0;
+    /* Remove o contorno de foco externo padrão no Firefox */
+}
