@@ -22,3 +22,10 @@ o projeto criado é uma Calculadora de Gorgeta
 <img width="390" alt="image" src="https://github.com/user-attachments/assets/c3470576-d0cb-428b-8fd1-c89171b2e0e3">
 
 
+
+<strong>As linhas dos códigos(JS), da estilização(CSS) e da marcação de hipertexto(html) estão devidamente comentadas para melhor entendimento, Abraços</strong>
+
+
+
+
+
