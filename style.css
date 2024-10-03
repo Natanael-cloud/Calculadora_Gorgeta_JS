@@ -14,7 +14,7 @@ main {
     /* Define uma margem de 2rem no topo e no fundo, e centraliza horizontalmente com "auto" */
     padding: 3rem 1.6rem 6rem 1.6rem;
     /* Define um espaçamento interno (padding): 3rem no topo, 1.6rem nas laterais e 6rem no fundo */
-    background: linear-gradient(30deg, #3dc0c0, #5bceae);
+    background: linear-gradient(30deg, #a13dc0, #5bce96);
     /* Aplica um fundo com gradiente linear, que vai de #3dc0c0 para #5bceae em um ângulo de 30 graus */
     border-radius: 4rem;
     /* Arredonda os cantos do elemento com 4rem */
