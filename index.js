@@ -1,4 +1,5 @@
 
 function update(){
-    console.log('OK')
+    let bill = document.getElementById('yourBill').value
+    console.log(bill)    
 }
